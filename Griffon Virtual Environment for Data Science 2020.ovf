@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<Envelope ovf:version="1.0" xml:lang="en-US" xmlns="http://schemas.dmtf.org/ovf/envelope/1" xmlns:ovf="http://schemas.dmtf.org/ovf/envelope/1" xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData" xmlns:vssd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vbox="http://www.virtualbox.org/ovf/machine">
+  <References>
+    <File ovf:id="file1" ovf:href="Griffon Virtual Environment for Data Science 2020-disk001.vmdk"/>
+  </References>
+  <DiskSection>
+    <Info>List of the virtual disks used in the package</Info>
+    <Disk ovf:capacity="107374182400" ovf:diskId="vmdisk1" ovf:fileRef="file1" ovf:format="http://www.vmware.com/interfaces/specifications/vmdk.html#streamOptimized" vbox:uuid="6e1dad84-1f78-4072-b6a7-e0c958fa87b5"/>
+  </DiskSection>
+  <NetworkSection>
+    <Info>Logical networks used in the package</Info>
+    <Network ovf:name="NAT">
+      <Description>Logical network used by this appliance.</Description>
+    </Network>
+  </NetworkSection>
+  <VirtualSystem ovf:id="Griffon Virtual Environment for Data Science 2020">
+    <Info>A virtual machine</Info>
+    <ProductSection>
+      <Info>Meta-information about the installed software</Info>
+      <Product>Griffon Virtual Environment for Data Science</Product>
+      <Vendor>GTK CYber LLC</Vendor>
+      <Version>2.8</Version>
+      <ProductUrl>https://github.com/gtkcyber/griffon-vm</ProductUrl>
+      <VendorUrl>https://gtkcyber.com</VendorUrl>
+    </ProductSection>
+    <AnnotationSection>
+      <Info>A human-readable annotation</Info>
+      <Annotation>Griffon is a environment for data science. Griffon is based on Ubuntu MATE and includes numerous data science tools, all installed and configured for immediate use.</Annotation>
+    </AnnotationSection>
+    <EulaSection>
+      <Info>License agreement for the virtual system</Info>
+      <License>
+BSD 3-Clause License
+
+
+
+
+Copyright (c) 2020, GTK Cyber
+
+All rights reserved.
+
+
+
+Redistribution and use in source and binary forms, with or without
+
+modification, are permitted provided that the following conditions are met:
+
+
+
+* Redistributions of source code must retain the above copyright notice, this
+
+  list of conditions and the following disclaimer.
+
+
+
+* Redistributions in binary form must reproduce the above copyright notice,
+
+  this list of conditions and the following disclaimer in the documentation
+
+  and/or other materials provided with the distribution.
+
+
+
+* Neither the name of the copyright holder nor the names of its
+
+  contributors may be used to endorse or promote products derived from
+
+  this software without specific prior written permission.
+
+
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</License>
+    </EulaSection>
+    <OperatingSystemSection ovf:id="94">
+      <Info>The kind of installed guest operating system</Info>
+      <Description>Ubuntu_64</Description>
+      <vbox:OSType ovf:required="false">Ubuntu_64</vbox:OSType>
+    </OperatingSystemSection>
+    <VirtualHardwareSection>
+      <Info>Virtual hardware requirements for a virtual machine</Info>
+      <System>
+        <vssd:ElementName>Virtual Hardware Family</vssd:ElementName>
+        <vssd:InstanceID>0</vssd:InstanceID>
+        <vssd:VirtualSystemIdentifier>Griffon Virtual Environment for Data Science 2020</vssd:VirtualSystemIdentifier>
+        <vssd:VirtualSystemType>virtualbox-2.2</vssd:VirtualSystemType>
+      </System>
+      <Item>
+        <rasd:Caption>4 virtual CPU</rasd:Caption>
+        <rasd:Description>Number of virtual CPUs</rasd:Description>
+        <rasd:ElementName>4 virtual CPU</rasd:ElementName>
+        <rasd:InstanceID>1</rasd:InstanceID>
+        <rasd:ResourceType>3</rasd:ResourceType>
+        <rasd:VirtualQuantity>4</rasd:VirtualQuantity>
+      </Item>
+      <Item>
+        <rasd:AllocationUnits>MegaBytes</rasd:AllocationUnits>
+        <rasd:Caption>8192 MB of memory</rasd:Caption>
+        <rasd:Description>Memory Size</rasd:Description>
+        <rasd:ElementName>8192 MB of memory</rasd:ElementName>
+        <rasd:InstanceID>2</rasd:InstanceID>
+        <rasd:ResourceType>4</rasd:ResourceType>
+        <rasd:VirtualQuantity>8192</rasd:VirtualQuantity>
+      </Item>
+      <Item>
+        <rasd:Address>0</rasd:Address>
+        <rasd:Caption>ideController0</rasd:Caption>
+        <rasd:Description>IDE Controller</rasd:Description>
+        <rasd:ElementName>ideController0</rasd:ElementName>
+        <rasd:InstanceID>3</rasd:InstanceID>
+        <rasd:ResourceSubType>PIIX4</rasd:ResourceSubType>
+        <rasd:ResourceType>5</rasd:ResourceType>
+      </Item>
+      <Item>
+        <rasd:Address>1</rasd:Address>
+        <rasd:Caption>ideController1</rasd:Caption>
+        <rasd:Description>IDE Controller</rasd:Description>
+        <rasd:ElementName>ideController1</rasd:ElementName>
+        <rasd:InstanceID>4</rasd:InstanceID>
+        <rasd:ResourceSubType>PIIX4</rasd:ResourceSubType>
+        <rasd:ResourceType>5</rasd:ResourceType>
+      </Item>
+      <Item>
+        <rasd:Address>0</rasd:Address>
+        <rasd:Caption>sataController0</rasd:Caption>
+        <rasd:Description>SATA Controller</rasd:Description>
+        <rasd:ElementName>sataController0</rasd:ElementName>
+        <rasd:InstanceID>5</rasd:InstanceID>
+        <rasd:ResourceSubType>AHCI</rasd:ResourceSubType>
+        <rasd:ResourceType>20</rasd:ResourceType>
+      </Item>
+      <Item>
+        <rasd:Address>0</rasd:Address>
+        <rasd:Caption>usb</rasd:Caption>
+        <rasd:Description>USB Controller</rasd:Description>
+        <rasd:ElementName>usb</rasd:ElementName>
+        <rasd:InstanceID>6</rasd:InstanceID>
+        <rasd:ResourceType>23</rasd:ResourceType>
+      </Item>
+      <Item>
+        <rasd:AddressOnParent>3</rasd:AddressOnParent>
+        <rasd:AutomaticAllocation>false</rasd:AutomaticAllocation>
+        <rasd:Caption>sound</rasd:Caption>
+        <rasd:Description>Sound Card</rasd:Description>
+        <rasd:ElementName>sound</rasd:ElementName>
+        <rasd:InstanceID>7</rasd:InstanceID>
+        <rasd:ResourceSubType>ensoniq1371</rasd:ResourceSubType>
+        <rasd:ResourceType>35</rasd:ResourceType>
+      </Item>
+      <Item>
+        <rasd:AddressOnParent>0</rasd:AddressOnParent>
+        <rasd:Caption>disk1</rasd:Caption>
+        <rasd:Description>Disk Image</rasd:Description>
+        <rasd:ElementName>disk1</rasd:ElementName>
+        <rasd:HostResource>/disk/vmdisk1</rasd:HostResource>
+        <rasd:InstanceID>8</rasd:InstanceID>
+        <rasd:Parent>5</rasd:Parent>
+        <rasd:ResourceType>17</rasd:ResourceType>
+      </Item>
+      <Item>
+        <rasd:AutomaticAllocation>true</rasd:AutomaticAllocation>
+        <rasd:Caption>Ethernet adapter on 'NAT'</rasd:Caption>
+        <rasd:Connection>NAT</rasd:Connection>
+        <rasd:ElementName>Ethernet adapter on 'NAT'</rasd:ElementName>
+        <rasd:InstanceID>9</rasd:InstanceID>
+        <rasd:ResourceSubType>E1000</rasd:ResourceSubType>
+        <rasd:ResourceType>10</rasd:ResourceType>
+      </Item>
+    </VirtualHardwareSection>
+    <vbox:Machine ovf:required="false" version="1.16-macosx" uuid="{87e211e8-eed6-4709-a81f-801d01bb2df4}" name="Griffon Virtual Environment for Data Science 2020" OSType="Ubuntu_64" snapshotFolder="Snapshots" lastStateChange="2020-07-30T23:12:46Z">
+      <ovf:Info>Complete VirtualBox machine configuration in VirtualBox format</ovf:Info>
+      <ExtraData>
+        <ExtraDataItem name="GUI/HiDPI/UnscaledOutput" value="true"/>
+        <ExtraDataItem name="GUI/LastCloseAction" value="SaveState"/>
+        <ExtraDataItem name="GUI/LastGuestSizeHint" value="1380,880"/>
+        <ExtraDataItem name="GUI/LastNormalWindowPosition" value="2771,88,1000,771"/>
+        <ExtraDataItem name="GUI/ScaleFactor" value="1.25"/>
+      </ExtraData>
+      <Hardware>
+        <CPU count="4">
+          <PAE enabled="false"/>
+          <LongMode enabled="true"/>
+          <X2APIC enabled="true"/>
+          <HardwareVirtExLargePages enabled="true"/>
+        </CPU>
+        <Memory RAMSize="8192"/>
+        <Display controller="VMSVGA" VRAMSize="256" accelerate3D="true"/>
+        <VideoCapture screens="1" options="ac_enabled=false" file="." fps="25"/>
+        <BIOS>
+          <IOAPIC enabled="true"/>
+        </BIOS>
+        <USB>
+          <Controllers>
+            <Controller name="OHCI" type="OHCI"/>
+          </Controllers>
+        </USB>
+        <Network>
+          <Adapter slot="0" enabled="true" MACAddress="080027D30E92" type="82540EM">
+            <NAT/>
+          </Adapter>
+        </Network>
+        <AudioAdapter codec="AD1980" driver="CoreAudio" enabled="true" enabledIn="false"/>
+        <Clipboard mode="Bidirectional"/>
+        <DragAndDrop mode="Bidirectional"/>
+        <GuestProperties>
+          <GuestProperty name="/VirtualBox/GuestAdd/HostVerLastChecked" value="6.1.10" timestamp="1596131080140952000" flags=""/>
+          <GuestProperty name="/VirtualBox/GuestAdd/Revision" value="138449" timestamp="1596148920357224000" flags=""/>
+          <GuestProperty name="/VirtualBox/GuestAdd/Version" value="6.1.10" timestamp="1596148920353989000" flags=""/>
+          <GuestProperty name="/VirtualBox/GuestAdd/VersionExt" value="6.1.10" timestamp="1596148920356361000" flags=""/>
+          <GuestProperty name="/VirtualBox/GuestInfo/Net/0/MAC" value="080027D30E92" timestamp="1596148925362747000" flags=""/>
+          <GuestProperty name="/VirtualBox/GuestInfo/Net/0/Name" value="enp0s3" timestamp="1596148925362925000" flags=""/>
+          <GuestProperty name="/VirtualBox/GuestInfo/Net/0/Status" value="Up" timestamp="1596148925362879000" flags=""/>
+          <GuestProperty name="/VirtualBox/GuestInfo/Net/0/V4/Broadcast" value="10.0.2.255" timestamp="1596148925362520000" flags=""/>
+          <GuestProperty name="/VirtualBox/GuestInfo/Net/0/V4/IP" value="10.0.2.15" timestamp="1596148925362478000" flags=""/>
+          <GuestProperty name="/VirtualBox/GuestInfo/Net/0/V4/Netmask" value="255.255.255.0" timestamp="1596148925362558000" flags=""/>
+          <GuestProperty name="/VirtualBox/GuestInfo/Net/Count" value="1" timestamp="1596148935373029000" flags=""/>
+          <GuestProperty name="/VirtualBox/GuestInfo/OS/Product" value="Linux" timestamp="1596148920353508000" flags=""/>
+          <GuestProperty name="/VirtualBox/GuestInfo/OS/Release" value="4.15.0-112-generic" timestamp="1596148920353775000" flags=""/>
+          <GuestProperty name="/VirtualBox/GuestInfo/OS/Version" value="#113-Ubuntu SMP Thu Jul 9 23:41:39 UTC 2020" timestamp="1596148920353899000" flags=""/>
+          <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="en_US" timestamp="1596148939630685000" flags="RDONLYGUEST"/>
+        </GuestProperties>
+      </Hardware>
+      <StorageControllers>
+        <StorageController name="IDE" type="PIIX4" PortCount="2" useHostIOCache="true" Bootable="true">
+          <AttachedDevice passthrough="false" type="DVD" hotpluggable="false" port="1" device="0"/>
+        </StorageController>
+        <StorageController name="SATA" type="AHCI" PortCount="1" useHostIOCache="true" Bootable="true" IDE0MasterEmulationPort="0" IDE0SlaveEmulationPort="1" IDE1MasterEmulationPort="2" IDE1SlaveEmulationPort="3">
+          <AttachedDevice type="HardDisk" hotpluggable="false" port="0" device="0">
+            <Image uuid="{6e1dad84-1f78-4072-b6a7-e0c958fa87b5}"/>
+          </AttachedDevice>
+        </StorageController>
+      </StorageControllers>
+    </vbox:Machine>
+  </VirtualSystem>
+</Envelope>
